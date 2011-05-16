@@ -1,0 +1,6 @@
+A simple wrapper of xmonad for people starting to use
+xmonad on a desktop environment like GNOME or KDE.
+
+If no argument given it checks DESKTOP_SESSION.
+
+   xmonad-desktop [desktop|gnome|kde|xfce]

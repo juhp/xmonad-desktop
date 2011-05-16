@@ -1,0 +1,19 @@
+name:               xmonad-desktop
+version:            0.1
+synopsis:           xmonad configured for GNOME, KDE, and XFCE
+description:
+    A simple wrapper to run xmonad configured for a GNOME, KDE, or XFCE desktop.
+category:           System
+license:            BSD3
+license-file:       LICENSE
+author:             Jens Petersen
+maintainer:         juhp@community.haskell.org
+extra-source-files: README
+cabal-version:      >= 1.2.1
+build-type:         Simple
+tested-with:        GHC == 6.12.3, GHC == 7.0.1
+
+
+executable xmonad-desktop
+    main-is:            xmonad-desktop.hs
+    build-depends:  	base >= 4, xmonad, xmonad-contrib
