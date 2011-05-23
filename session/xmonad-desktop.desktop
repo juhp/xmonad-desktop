@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=XMonad desktop
+Exec=xmonad-desktop
+NoDisplay=true
+# name we put on the WM spec check window
+X-GNOME-WMName=Xmonad
+X-GNOME-Autostart-Phase=WindowManager
+X-GNOME-Provides=windowmanager
+X-GNOME-Autostart-Notify=true
