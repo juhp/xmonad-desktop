@@ -1,6 +1,8 @@
 A simple wrapper of xmonad for people starting to use
 xmonad on a desktop environment like GNOME or KDE.
 
-If no argument given it checks DESKTOP_SESSION.
+Usage:  xmonad-desktop [desktop|gnome|kde|xfce]
 
-   xmonad-desktop [desktop|gnome|kde|xfce]
+runs xmonad configured for the chosen desktop.
+
+When no argument is given it uses the value of DESKTOP_SESSION.

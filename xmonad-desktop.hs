@@ -23,7 +23,10 @@ main = do
 help = putStrLn "Usage: xmonad-desktop [desktop|gnome|kde|xfce]"
 
 desktop :: String -> IO ()
-desktop "desktop" = xmonad desktopConfig
-desktop "gnome" = xmonad gnomeConfig
-desktop "kde" = xmonad kde4Config
-desktop "xfce" = xmonad xfceConfig
+desktop s = putStrLn ("Starting xmonad configured for " ++ s) >> run_desktop s
+
+run_desktop :: String -> IO ()
+run_desktop "desktop" = xmonad desktopConfig
+run_desktop "gnome" = xmonad gnomeConfig
+run_desktop "kde" = xmonad kde4Config
+run_desktop "xfce" = xmonad xfceConfig
