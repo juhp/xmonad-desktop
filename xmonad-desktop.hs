@@ -11,14 +11,14 @@ desktops = ["desktop", "gnome", "kde", "xfce"]
 
 main = do
      args <- getArgs
-     case (length args) of
-          1 | (head args) `elem` desktops -> desktop (head args)
-          0 -> do
+     case args of
+          [arg] | arg `elem` desktops -> desktop arg
+          [] -> do
                session <- getEnv "DESKTOP_SESSION"
-               if (map toLower session) `elem` desktops
+               if map toLower session `elem` desktops
                   then desktop (map toLower session)
                   else desktop "desktop"
-          otherwise -> help
+          _ -> help
 
 help = putStrLn "Usage: xmonad-desktop [desktop|gnome|kde|xfce]"
 
